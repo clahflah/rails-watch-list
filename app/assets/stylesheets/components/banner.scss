@@ -1,0 +1,22 @@
+.banner {
+  background-image: url("movies_banner3.webp");
+  height: 60vh;
+  background-position: 10% 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1 {
+    padding: 10px 60px;
+    color: white;
+    position:absolute;
+    left: 616px;
+    top: 125px;
+    color: #190458;
+  }
+  h3 {
+    padding: 10px 20px;
+    position:absolute;
+    left: 616px;
+    top: 125px;
+    font-size: 30px;
+  }
+}

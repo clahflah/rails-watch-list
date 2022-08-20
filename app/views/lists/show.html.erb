@@ -1,0 +1,14 @@
+<div class="background">
+  <h1 class ="heading"><%= @list.name %></h1>
+  <div class="container">
+    <% @bookmarks_needed.each do |bookmark| %>
+      <% movie = Movie.find(bookmark.movie_id)%>
+      <div class = "movie-card">
+        <ul>
+          <li><%= movie['title'] %></li>
+          <li><%= image_tag movie['poster_url'], alt: "movie poster"%></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>

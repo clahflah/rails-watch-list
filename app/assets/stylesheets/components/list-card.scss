@@ -1,0 +1,37 @@
+.list-card {
+  height: 174px;
+  width: 330px;
+  background-image: url("movies.jpeg");
+  background-position: center;
+  background-size: cover;
+  padding: 70px 0;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 11px 10px 23px 1px rgba(0,0,0,0.34);
+  margin: 30px 10px;
+}
+
+.list-card h2 {
+  font-size: 40px;
+  color: white;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.list-card a {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.list-card a:hover {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}

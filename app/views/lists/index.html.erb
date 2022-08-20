@@ -1,0 +1,16 @@
+<div class = 'background'>
+  <div class = 'banner'>
+    <div class="banner-text">
+      <h1>Movie Lists</h1>
+      <h3>Organize your movies, organize your life.</h3>
+    </div>
+  </div>
+  <div class='cards-container'>
+    <% @lists.each do |list| %>
+        <div class='list-card'>
+          <h2><%= list.name %></h2>
+          <%= link_to "Enter", list_path(list) %>
+        </div>
+    <% end %>
+  </div>
+</div>

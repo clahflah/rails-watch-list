@@ -4,6 +4,8 @@
   background-position: 10% 40%;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  top: -50px;
 
   h1 {
     padding: 10px 60px;
@@ -22,4 +24,20 @@
     color: white;
     font-size: 40px;
   }
+
+  button {
+    padding: 10px 50px;
+    position: absolute;
+    left: 176px;
+    top: 395px;
+    color: white;
+    font-size: 30px;
+    background-color: #6f191c;
+    border-radius: 20px;
+    border: none;
+}
+
+button:hover {
+  opacity: .75;
+}
 }

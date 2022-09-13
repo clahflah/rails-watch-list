@@ -16,10 +16,7 @@
   </head>
 
   <body>
-    <div class="nav-bar" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
-      <%= link_to "New List", new_list_path%>
-      <%= link_to "Home", lists_path%>
-    </div>
+  <%= render "shared/navbar" %>
     <%= yield %>
   </body>
 </html>

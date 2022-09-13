@@ -1,0 +1,11 @@
+<% if params[:action] == 'index' && params[:controller] == 'lists'  %>
+  <div class="nav-bar" data-controller="navbar" data-action="scroll@window->navbar#updateNavbar">
+    <%= link_to "New List", new_list_path%>
+    <%= link_to "Home", lists_path%>
+  </div>
+<% else%>
+  <div class="nav-bar navbar-black">
+    <%= link_to "New List", new_list_path%>
+    <%= link_to "Home", lists_path%>
+  </div>
+<% end %>

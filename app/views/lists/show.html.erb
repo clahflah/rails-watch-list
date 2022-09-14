@@ -1,14 +1,26 @@
-<div class="background">
+<div class="background" >
   <h1 class ="heading"><%= @list.name %></h1>
-  <div class="container">
+  <div class="movies-container">
     <% @bookmarks_needed.each do |bookmark| %>
+
       <% movie = Movie.find(bookmark.movie_id)%>
-      <div class = "movie-card">
-        <ul>
-          <li><%= movie['title'] %></li>
-          <li><%= image_tag movie['poster_url'], alt: "movie poster"%></li>
-        </ul>
-      </div>
+        <div class = "movie-card" data-action="click->list-extension#expand">
+          <p><strong><%= movie['title'] %></strong></p>
+          <div  class="img-movie" >
+            <%= image_tag movie['poster_url'], alt: "movie poster"%>
+          </div>
+          <div class="stars">
+            <% movie.rating.times do %>
+              <i class="fa-solid fa-star"></i>
+            <% end %>
+            <% if movie.rating < 10 %>
+              <% (10 - movie.rating).times do %>
+                <i class="fa-regular fa-star"></i>
+                <% end %>
+            <% end %>
+          </div>
+          <p class="overview"><%= movie.overview %></p>
+        </div>
     <% end %>
   </div>
 </div>

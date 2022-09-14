@@ -1,16 +1,18 @@
-<div class = 'background'>
+<div class="background" data-controller="scroller">
   <div class = 'banner'>
-    <div class="banner-text">
-      <h1>Movie Lists</h1>
-      <h3>Organize your movies, organize your life.</h3>
+    <div class="banner-txt">
+      <h1>Movies</h1>
+      <h3><span data-controller="typed-js"></span></h3>
+      <button data-action="click->scroller#scroll">Enter</button>
     </div>
   </div>
   <div class='cards-container'>
     <% @lists.each do |list| %>
-        <div class='list-card'>
-          <h2><%= list.name %></h2>
-          <%= link_to "Enter", list_path(list) %>
+        <%= link_to list_path(list), class:"no-underline" do |link| %>
+          <div class='list-card'>
+            <h2><%= list.name %></h2>
         </div>
+        <% end %>
     <% end %>
   </div>
 </div>

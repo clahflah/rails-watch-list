@@ -6,3 +6,15 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import ListExtensionController from "./list_extension_controller"
+application.register("list-extension", ListExtensionController)
+
+import NavbarController from "./navbar_controller"
+application.register("navbar", NavbarController)
+
+import ScrollerController from "./scroller_controller"
+application.register("scroller", ScrollerController)
+
+import TypedJsController from "./typed_js_controller"
+application.register("typed-js", TypedJsController)

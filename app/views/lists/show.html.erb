@@ -5,7 +5,7 @@
 
       <% movie = Movie.find(bookmark.movie_id)%>
         <div class = "movie-card" data-action="click->list-extension#expand">
-          <p><strong><%= movie['title'] %></strong></p>
+          <p><%= movie['title'] %></p>
           <div  class="img-movie" >
             <%= image_tag movie['poster_url'], alt: "movie poster"%>
           </div>
